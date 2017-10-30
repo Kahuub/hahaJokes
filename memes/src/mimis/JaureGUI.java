@@ -25,9 +25,10 @@ public class JaureGUI extends JFrame{
 
 	JPanel Myself;
 	Image Selfie;
-	Timer clock;
-	static int speed = 25;
-	int graden = 0;
+	Timer ally;
+	static int dinah = 25;
+	int normani = 0;
+	static int CAMILA = 1;
 
 
 	public static void main(String[] args) {
@@ -47,19 +48,19 @@ public class JaureGUI extends JFrame{
             }
         };
 				
-		clock = new Timer(speed,taskPerformer);
+		ally = new Timer(dinah,taskPerformer);
         //clock.setInitialDelay(2000);
-        clock.start(); 
+        ally.start(); 
 		
 	}
 	private void drawMe() {
-		Graphics g = Myself.getGraphics();
+		Graphics geil = Myself.getGraphics();
 		
-		graden = (graden +10) % 3600;
+		normani = (normani +10) % 3600;
 		
-		Graphics2D g2d = (Graphics2D) g;
+		Graphics2D g2d = (Graphics2D) geil;
 		g2d.translate(300, 300);
-		g2d.rotate(Math.toRadians(graden/10f));
+		g2d.rotate(Math.toRadians(normani/10f));
 		g2d.drawImage(Selfie, -300, -300, 600, 600, null);
 		
 				
@@ -77,14 +78,14 @@ public class JaureGUI extends JFrame{
             public void windowClosing(WindowEvent e) {
                 System.out.println(e);
 
-                clock.stop();
-                System.exit(1);
+                ally.stop();
+                System.exit(CAMILA);
             }
 
             public void windowClosed(WindowEvent e) {
                 System.out.println(e);
-                clock.stop();
-                System.exit(1);
+                ally.stop();
+                System.exit(CAMILA);
             }
         });
 
